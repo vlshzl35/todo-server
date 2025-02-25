@@ -1,0 +1,23 @@
+package com.sh.web.vo;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
+
+import java.time.LocalDate;
+
+@Slf4j
+@Getter
+@Setter
+@ToString
+public class TaskRequest {
+    private String title;
+    private String description;
+    @JsonDeserialize(using = LocalDateDeserializer.class) // JSON 데이터를 LocalDate타입으로 상호 변환
+    @JsonFormat(shape= JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private LocalDate dueDate;
+}
