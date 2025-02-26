@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.time.LocalDate;
 
+// 일정 수정 시 필요한 컬럼만 담고 있음
 @Slf4j
 @Getter
 @Setter
