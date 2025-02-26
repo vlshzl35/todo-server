@@ -20,6 +20,11 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
+    // SpringMVC 테스트 프레임워크 MockMvc : http요청, 응답을 테스트하기 위해 사용할 수 있음
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    // mockito: 테스트 객체의 의존성을 대체할 수 있음
+    testImplementation 'org.mockito:mockito-junit-jupiter:3.12.4'
+    // junit 테스트
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
